@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Timeless</title>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="myVideo">
+            <source src="video/202406121408.mp4">
+            Seu navegador não suporta a tag de vídeo.
+        </video>
+        <div class="image-overlay">
+            <img src="./images/timeless png 1.png" alt="logo timeless"/>
+            <div class="card">
+                <button onclick="window.location.href='http://timeless.lat';">Login</button>
+                <button onclick="showAboutUs()">About </button>
+            </div>
+        </div>
+    </div>
+    <div id="aboutUsCard" class="about-us-card">
+        <div class="about-us-content">
+            <button class="close-btn" onclick="hideAboutUs()">X</button>
+            <h2>About Us</h2>
+            <p>
+                A convergência entre eficácia, elegância e singularidade não é facilmente encontrada em qualquer ramo de atividade, e é justamente nesse espaço altamente restrito que atua a Timeless RPB LTDA.
+                Somos um escritório de relações públicas e assistência jurídica que opera com facilidade nas mais diversas áreas; não medimos esforços para proteger os seus interesses, alavancar seu empreendimento e solucionar seus imbróglios, sejam eles de natureza jurídica, corporativa, transacional ou de qualquer outro tipo.
+                Desde a concepção até a realização, nossas estratégias são pensadas exclusivamente com a função de atender as necessidades dos nossos seletos associados e apresentar resultados concretos, e fazemos isso de maneira sólida, segura e especializada, tornando a sua organização em um destaque dentre os mercados mais exigentes e concorridos.
+                Não apenas fortalecemos a sua imagem, como também contamos com uma equipe jurídica de excelência. Com auxílio do nosso staff meticulosamente selecionado, e trânsito assegurado em diversas instâncias, garantimos que seus interesses sejam protegidos com o mais alto nível de cuidado e expertise.
+                Essa é a Timeless, uma agência com acesso expandido e excelente relacionamento, onde a privacidade e o alto padrão de competência são inegociáveis.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>
+                &copy; Timeless Relações Públicas do Brasil Ltda 2024. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function showAboutUs() {
+            document.getElementById('aboutUsCard').style.display = 'block';
+        }
+
+        function hideAboutUs() {
+            document.getElementById('aboutUsCard').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

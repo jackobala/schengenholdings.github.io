@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.video-background {
+    position: relative;
+    height: 100vh; /* Certifique-se de que o vídeo cobre toda a altura da viewport */
+    width: 100%;
+    overflow: hidden;
+}
+
+#myVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background: url('fallback.jpg') no-repeat;
+    background-size: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Garantir que a imagem esteja acima do vídeo */
+    text-align: center; /* Centraliza o conteúdo dentro da div */
+}
+
+.image-overlay img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.card button {
+    background-color: #1e2020;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.card button:hover {
+    background-color: #13293D;
+}
+
+.about-us-card {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(19, 41, 61, 0.87);
+    padding: 50px;
+    border-radius: 10px;
+    z-index: 2; /* Garantir que o card esteja acima da imagem e do vídeo */
+    max-width: 90%;
+    max-height: 80%;
+    overflow-y: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.about-us-content {
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+header {
+    border-bottom: 1px solid #cccccc21;
+}
+
+header nav li {
+    display: inline;
+    margin-left: 16px;
+    font-size: 25px;
+}
+
+header nav li a {
+    text-decoration: none;
+    color: aliceblue; /* Adicionando cor para os links no nav */
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+header .container, 
+section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+footer {
+    padding: 16px 0;
+    background-color: #13293D;
+    text-align: center;
+    font-style: italic;
+}
+
+#about .logo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px auto;
+}
+
+#paragrafo p {
+    text-align-last: justify;
+    margin: 60px;
+    padding: 34px;
+    font-size: 19px;
+    background-color: #13293D; /* Adicionando cor de fundo ao parágrafo */
+    color: aliceblue; /* Ajustando a cor do texto */
+}
