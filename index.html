@@ -8,13 +8,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>Timeless</title>
+    <style>
+        .sound-control {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <div class="video-background">
-        <video autoplay muted loop id="myVideo">
-            <source src="video/202406121408.mp4">
+        <video autoplay loop id="myVideo">
+            <source src="video/202406121408.mp4" type="video/mp4">
             Seu navegador não suporta a tag de vídeo.
         </video>
+        <button class="sound-control" onclick="toggleSound()">Ativar Som</button>
         <div class="image-overlay">
             <img src="./images/timeless png 1.png" alt="logo timeless"/>
             <div class="card">
@@ -46,12 +61,29 @@
     </footer>
 
     <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const video = document.getElementById('myVideo');
+            video.muted = true;  // Ensure video starts muted
+        });
+
         function showAboutUs() {
             document.getElementById('aboutUsCard').style.display = 'block';
         }
 
         function hideAboutUs() {
             document.getElementById('aboutUsCard').style.display = 'none';
+        }
+
+        function toggleSound() {
+            const video = document.getElementById('myVideo');
+            const soundControl = document.querySelector('.sound-control');
+            if (video.muted) {
+                video.muted = false;
+                soundControl.textContent = 'Desativar Som';
+            } else {
+                video.muted = true;
+                soundControl.textContent = 'Ativar Som';
+            }
         }
     </script>
 </body>
